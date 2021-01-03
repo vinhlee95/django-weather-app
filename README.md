@@ -1,10 +1,5 @@
-# Django boilerplate
-A boilerplate for Django backend projects
-
-## Technologies
-- [Poetry](https://python-poetry.org/docs/): Python package manager
-- [Django](https://www.djangoproject.com/): Python backend framework
-- Docker
+# Weather app
+Simple Django weather app cloned from [django-template](https://github.com/vinhlee95/django-template)
 
 ## Install packages
 `poetry install`

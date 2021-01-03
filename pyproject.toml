@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "django-template"
+name = "weather_app"
 version = "0.1.0"
-description = "A boilerplate for Django backend projects"
+description = "A simpler Django weather app"
 authors = ["Vinh Le <lethanhvinh95@gmail.com>"]
 license = "MIT"
 
