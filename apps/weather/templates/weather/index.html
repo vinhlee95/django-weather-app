@@ -68,6 +68,9 @@
                 </div>
             </div>
         </div>
+        {% if error_message %}
+            <div style="color: red; text-align: center">{{error_message}}</div>
+        {% endif %}
     </section>
     <footer class="footer">
     </footer>
