@@ -1,11 +1,15 @@
 import requests
 from django.shortcuts import render
 import logging
+from .models import City
 
 
 def render_view(request):
     url = "http://api.openweathermap.org/data/2.5/weather?q={}&units=metric&appid=d7ca28c2bef8ad46a170d61b4dc1f115"
     city = "Helsinki"
+    cities = City.objects.all()
+    print(cities)
+
     formatted_url = url.format(city)
     res = requests.get(formatted_url).json()
 
