@@ -1,17 +1,20 @@
 import requests
 from django.shortcuts import render
 import logging
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+
 from .models import City, WeatherData
-from django.http import HttpResponse
+from .forms import CityForm
 
 
 def render_view(request):
     if request.method == "POST":
-        city_name = request.POST.get("city_name", None)
+        city_name = request.POST.get("name", None)
         if city_name:
             City.objects.create(name=city_name)
-
-    return render(request, "weather/index.html", {"weather_data": get_weather_data()})
+            return HttpResponseRedirect(reverse("weather:list"))
+    return render(request, "weather/index.html", {"weather_data": get_weather_data(), "form": CityForm()})
 
 
 def get_weather_data() -> [WeatherData]:

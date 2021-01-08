@@ -4,5 +4,5 @@ from .views import render_view
 app_name = "weather"
 
 urlpatterns = [
-    path("/view", render_view)
+    path("/view", render_view, name='list')
 ]
